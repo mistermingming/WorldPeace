@@ -8,9 +8,9 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.2.0'
-        classpath cfg.plugin.kotlinVersion
-        classpath 'com.google.dagger:hilt-android-gradle-plugin:2.40.5'
+        classpath "com.android.tools.build:gradle:$cfg.plugin.androidGradlePlugin"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$cfg.plugin.kotlinVersion"
+        classpath "com.google.dagger:hilt-android-gradle-plugin:2.40.5"
     }
 }
 

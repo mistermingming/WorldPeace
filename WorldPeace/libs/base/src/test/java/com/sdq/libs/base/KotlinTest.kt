@@ -46,4 +46,24 @@ class KotlinTest {
                 }
         }.let { println("sequence time = $it") }
     }
+
+    @Test
+    fun tableSize() {
+        var n = 16 - 1
+        n = n.or(n.ushr(1))
+        n = n.or(n.ushr(2))
+        n = n.or(n.ushr(4))
+        n = n.or(n.ushr(8))
+        n = n.or(n.ushr(16))
+        val result = if (n < 0) 1 else n + 1
+        println("result = $result")
+    }
+
+    @Test
+    fun midTest() {
+        val left = 0
+        val right = 10
+        val mid = (left + right).ushr(1)
+        println("mid = $mid")
+    }
 }

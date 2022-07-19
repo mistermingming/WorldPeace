@@ -24,9 +24,9 @@ ext {
     ]
 
     plugin = [
-            "androidGradlePlugin": "com.android.tools.build:gradle:7.1.2",
-            "kotlinVersion"      : "org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10",
-            "hiltGradlePlugin"   : "com.google.dagger:hilt-android-gradle-plugin:2.38.1"
+            "androidGradlePlugin": "7.2.1",
+            "kotlinVersion"      : "1.7.0",
+            "hiltGradlePlugin"   : "2.38.1"
     ]
 
     library = [
