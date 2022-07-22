@@ -11,8 +11,3 @@ data class TreeNode(
     val left: TreeNode?,
     val right: TreeNode?
 )
-
-class Tree {
-    fun inorder() {
-    }
-}

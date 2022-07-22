@@ -16,6 +16,7 @@
             <option value="$PROJECT_DIR$/biz" />
             <option value="$PROJECT_DIR$/biz/home" />
             <option value="$PROJECT_DIR$/biz/login" />
+            <option value="$PROJECT_DIR$/biz/mvi" />
             <option value="$PROJECT_DIR$/framework" />
             <option value="$PROJECT_DIR$/framework/pay" />
             <option value="$PROJECT_DIR$/libs" />

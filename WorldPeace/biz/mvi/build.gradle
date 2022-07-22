@@ -1,0 +1,21 @@
+def cfg = rootProject.ext
+
+apply from: "../../project.gradle"
+
+android {
+    defaultConfig {
+        if (cfg.isDebug) {
+            applicationId cfg.applicationId.mvi
+        }
+    }
+}
+
+dependencies {
+    implementation project(':libs:base')
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    api cfg.library.hiltAndroid
+    kapt cfg.library.hiltCompiler
+}
