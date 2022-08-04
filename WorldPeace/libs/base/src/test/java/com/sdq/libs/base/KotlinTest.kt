@@ -66,4 +66,18 @@ class KotlinTest {
         val mid = (left + right).ushr(1)
         println("mid = $mid")
     }
+
+
+    @Test
+    fun testEvent() {
+        val event = CopyEvent("2")
+        println("event = ${event.value} ${event.eventId}")
+        val copy = event.copy(value = "3", eventId = Event.generateEventId())
+        println("copy event = ${copy.value} ${copy.eventId}")
+    }
 }
+
+data class CopyEvent(
+    val value :String,
+    override val eventId: Long = Event.generateEventId()
+) : Event

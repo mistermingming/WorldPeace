@@ -18,3 +18,7 @@ data class NewsItemUiState(
     val body: String,
     val bookmarked: Boolean = false,
 )
+
+data class Message(
+    val msg: String
+)

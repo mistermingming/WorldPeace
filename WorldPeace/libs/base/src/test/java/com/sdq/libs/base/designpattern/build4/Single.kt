@@ -1,4 +1,4 @@
-package com.sdq.libs.base.dp.build7
+package com.sdq.libs.base.designpattern.build4
 
 /**
  *
