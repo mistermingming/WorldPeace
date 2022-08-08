@@ -1,0 +1,42 @@
+def cfg = rootProject.ext
+
+apply from: "../../project.gradle"
+
+android {
+    defaultConfig {
+        if (cfg.isDebug) {
+            applicationId cfg.applicationId.login
+        }
+    }
+    buildFeatures {
+        // Enable Jetpack Compose for this module
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion cfg.library.composeVersion
+    }
+    packagingOptions {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
+}
+
+dependencies {
+    implementation project(':libs:base')
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    androidTestImplementation "androidx.compose.ui:ui-test-junit4:$cfg.library.composeVersion"
+
+    api "com.google.dagger:hilt-android:$cfg.library.hiltVersion"
+    kapt "com.google.dagger:hilt-compiler:$cfg.library.hiltVersion"
+
+    implementation "androidx.compose.ui:ui:$cfg.library.composeVersion"
+    implementation "androidx.compose.material:material:$cfg.library.composeVersion"
+    implementation "androidx.compose.ui:ui-tooling-preview:$cfg.library.composeVersion"
+    implementation 'androidx.activity:activity-compose:1.4.0'
+
+    debugImplementation "androidx.compose.ui:ui-tooling:$cfg.library.composeVersion"
+    debugImplementation "androidx.compose.ui:ui-test-manifest:$cfg.library.composeVersion"
+}

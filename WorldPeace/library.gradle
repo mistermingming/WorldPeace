@@ -8,9 +8,9 @@ ext {
     isDebug = true
 
     android = [
-            compileSdkVersion: 31,
+            compileSdkVersion: 32,
             minSdkVersion    : 21,
-            targetSdkVersion : 31,
+            targetSdkVersion : 32,
             buildToolsVersion: "30.0.3",
 
             versionCode      : 1,
@@ -18,32 +18,33 @@ ext {
     ]
 
     applicationId = [
-            "app"  : "com.sdq.worldpeace",
-            "home" : "com.sdq.home",
-            "login": "com.sdq.login",
-            "mvi"  : "com.sdq.mvi"
+            "app"      : "com.sdq.worldpeace",
+            "home"     : "com.sdq.home",
+            "login"    : "com.sdq.login",
+            "mvi"      : "com.sdq.mvi",
+            "mycompose": "com.sdq.biz.mycompose"
     ]
 
     plugin = [
-            "androidGradlePlugin": "7.2.1",
+            "androidGradlePlugin": "7.2.2",
             "kotlinVersion"      : "1.7.0",
-            "hiltGradlePlugin"   : "2.38.1"
+            "hiltGradlePlugin"   : "2.42"
     ]
 
     library = [
-            "fragmentKtx"             : 'androidx.fragment:fragment-ktx:1.4.1',
-            "activityKtx"             : 'androidx.activity:activity-ktx:1.4.0',
-            "coreKtx"                 : "androidx.core:core-ktx:1.7.0",
-            "appcompat"               : "androidx.appcompat:appcompat:1.4.1",
-            "material"                : "com.google.android.material:material:1.5.0",
-            "constraintlayout"        : "androidx.constraintlayout:constraintlayout:2.1.3",
-            "hiltCompiler"            : "com.google.dagger:hilt-compiler:2.41",
-            "hiltAndroid"             : "com.google.dagger:hilt-android:2.41",
-            "kotlinxCoroutinesAndroid": "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.0",
-            "lifecycleRuntimeKtx"     : "androidx.lifecycle:lifecycle-runtime-ktx:2.4.1"
+            "fragmentKtx"             : "1.4.1",
+            "activityKtx"             : "1.4.0",
+            "coreKtx"                 : "1.7.0",
+            "appcompat"               : "1.4.1",
+            "material"                : "1.5.0",
+            "constraintlayout"        : "2.1.3",
+            "kotlinxCoroutinesAndroid": "1.6.1",
+            "lifecycleRuntimeKtx"     : "2.4.1",
+            "hiltVersion"             : "2.42",
+            "composeVersion"          : "1.2.0"
     ]
 
-    libARouter = "com.alibaba:arouter-api:1.5.1"
-    libARouterCompiler = "com.alibaba:arouter-compiler:1.5.1"
+    libARouter = "1.5.1"
+    libARouterCompiler = "1.5.1"
     libGson = "com.google.code.gson:gson:2.8.9"
 }

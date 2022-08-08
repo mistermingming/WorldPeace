@@ -1,4 +1,4 @@
-package com.sdq.android.mvi
+package com.sdq.biz.mvi
 
 /**
  *

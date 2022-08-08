@@ -16,6 +16,6 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
-    api cfg.library.hiltAndroid
-    kapt cfg.library.hiltCompiler
+    api "com.google.dagger:hilt-android:$cfg.library.hiltVersion"
+    kapt "com.google.dagger:hilt-compiler:$cfg.library.hiltVersion"
 }
