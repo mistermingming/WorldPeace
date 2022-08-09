@@ -1,5 +1,6 @@
-package com.sdq.libs.base
+package com.sdq.libs.base.coroutines
 
+import com.sdq.libs.base.ControlledRunner
 import kotlinx.coroutines.*
 import kotlinx.coroutines.selects.select
 import org.junit.Test

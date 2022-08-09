@@ -1,4 +1,4 @@
-package com.sdq.libs.base
+package com.sdq.libs.base.coroutines
 
 import kotlinx.coroutines.*
 import org.junit.Test

@@ -1,4 +1,4 @@
-package com.sdq.libs.base
+package com.sdq.libs.base.coroutines
 
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.*
@@ -68,9 +68,13 @@ class SharedFlowTest {
     fun testSharedFlow() {
         //SharedFlow没有粘性事件
         var v = 0
-        val sharedFlow = MutableSharedFlow<Int>()
+        val stateFlow = MutableStateFlow(1)
+        MutableSharedFlow<Int>()
+        val sharedFlow1 = stateFlow.asSharedFlow()//MutableSharedFlow<Int>()
         runBlocking {
 //            sharedFlow.emit(++v)
+            val sharedFlow = stateFlow
+                .shareIn(GlobalScope,SharingStarted.Lazily)
 
             val job = sharedFlow.onEach {
                 println("receiver$it")
@@ -78,8 +82,14 @@ class SharedFlowTest {
 //            sharedFlow.emit(++v)
 
             delay(5000)
-            sharedFlow.emit(++v)
             job.cancel()
+            delay(1000)
+            val job2 = sharedFlow.onEach {
+                println("receiver2$it")
+            }.launchIn(this)
+
+            delay(5000)
+//            sharedFlow.emit(++v)
             println("end")
         }
     }

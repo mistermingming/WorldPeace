@@ -75,6 +75,39 @@ class KotlinTest {
         val copy = event.copy(value = "3", eventId = Event.generateEventId())
         println("copy event = ${copy.value} ${copy.eventId}")
     }
+
+    @Test
+    fun testEquals(){
+        val trade = Trade(1)
+        val new = Trade(id = 1)
+        println(System.identityHashCode(trade))
+        println(System.identityHashCode(new))
+        println(trade ==new)
+        println(trade === new)
+        println(Throw(2)==Throw(2))
+    }
+}
+class Throw(
+    val id:Int
+)
+
+class Trade(
+    val id :Int
+){
+    override fun equals(other: Any?): Boolean {
+        if (this === other) return true
+        if (javaClass != other?.javaClass) return false
+
+        other as Trade
+
+        if (id != other.id) return false
+
+        return true
+    }
+
+    override fun hashCode(): Int {
+        return id
+    }
 }
 
 data class CopyEvent(

@@ -1,17 +1,12 @@
-package com.sdq.libs.base
+package com.sdq.libs.base.coroutines
 
-import androidx.lifecycle.flowWithLifecycle
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.delay
+import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.*
-import kotlinx.coroutines.runBlocking
-import kotlinx.coroutines.test.runBlockingTestOnTestScope
 import org.junit.Test
 import java.lang.RuntimeException
 import java.util.concurrent.atomic.AtomicInteger
 
 class FlowTest01 {
-
     @Test
     fun testFlowTransformOperator() = runBlocking {
         (1..3).asFlow()
@@ -25,8 +20,6 @@ class FlowTest01 {
                 emit("response $it")
             }
             .collect { println(it) }
-
-
     }
 
     @Test
@@ -99,9 +92,21 @@ class FlowTest01 {
             emit(i)
         }
     }
-
     @Test
-    fun testFlowException() = runBlocking {
+    fun testCancellationException() = runBlocking<Unit> {
+        val job1 = GlobalScope.launch {
+            try {
+                delay(1000)
+                println("job 1")
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        }
+        delay(100)
+        job1.cancelAndJoin()
+    }
+    @Test
+    fun testFlowException() = runBlocking<Unit> {
         try {
             simpleFlow().collect{
                 println(it)
@@ -142,7 +147,7 @@ class FlowTest01 {
     }
 
     @Test
-    fun testSelectFlow() = runBlocking {
+    fun testSelectFlow() = runBlocking<Unit> {
         listOf(simpleFlow(),simpleFlow())
             .merge()
             .collect{

@@ -1,8 +1,6 @@
-package com.sdq.libs.base
+package com.sdq.libs.base.coroutines
 
 import kotlinx.coroutines.*
-import kotlinx.coroutines.flow.channelFlow
-import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import org.junit.Test
@@ -11,7 +9,6 @@ import java.lang.ArithmeticException
 import java.lang.IllegalArgumentException
 import java.lang.IndexOutOfBoundsException
 import kotlin.coroutines.ContinuationInterceptor
-import kotlin.system.measureTimeMillis
 
 class CoroutinesTest03 {
     @Test
@@ -176,15 +173,15 @@ class CoroutinesTest03 {
         val job = scope.launch {
             println(" job 1 ${coroutineContext[Job]}")
             /*scope.*/launch {
-                println("job 2 ${coroutineContext[Job]}")
-                try {
-                    delay(20000)
-                    println("inner launch start ....")
-                } catch (e: Exception) {
-                    println("exception :$e")
-                }
-                println("inner launch end.")
+            println("job 2 ${coroutineContext[Job]}")
+            try {
+                delay(20000)
+                println("inner launch start ....")
+            } catch (e: Exception) {
+                println("exception :$e")
             }
+            println("inner launch end.")
+        }
         }
         delay(1000)
 //        scope.cancel()
