@@ -21,11 +21,11 @@ public class JavaTest {
     @Test
     public void test01(){
         Map<String, List<String>> stockaccountMap = new HashMap<> ();
-        stockaccountMap.put("1", new ArrayList<String>(Arrays.asList("123","124")));
-        stockaccountMap.put("2", new ArrayList<String>(Arrays.asList("234","245")));
         stockaccountMap.put("S", new ArrayList<String>(Arrays.asList("s12","s35")));
         stockaccountMap.put("G", new ArrayList<String>(Arrays.asList("g5678","g36")));
-
+        stockaccountMap.put("9", new ArrayList<String>(Arrays.asList("978","916")));
+        stockaccountMap.put("1", new ArrayList<String>(Arrays.asList("123","124")));
+        stockaccountMap.put("2", new ArrayList<String>(Arrays.asList("234","245")));
 
         Iterator<Map.Entry<String, List<String>>> iterator = stockaccountMap.entrySet().iterator();
         List<CharSequence> exTypeList = new ArrayList<CharSequence>(stockaccountMap.size());
@@ -58,5 +58,20 @@ public class JavaTest {
 
         System.out.println("exTypeList = "+ exTypeList);
         System.out.println("accountList ="+ accountList);
+    }
+
+
+    @Test
+    public void testArray(){
+        CharSequence[][] mStockAccountArr =new CharSequence[2][];
+        mStockAccountArr[0] = new CharSequence[]{"1","2","3","4"};
+        mStockAccountArr[1] = new CharSequence[]{"s","a","v","q"};
+        System.out.println("mStockAccountArr = "+ mStockAccountArr[0].length);
+
+        CharSequence[][] copyValue = mStockAccountArr;
+        System.out.println("copyValue = "+ copyValue[0].length);
+
+        mStockAccountArr[0] = new CharSequence[]{"1"};
+        System.out.println("copyValue1 = "+ copyValue[0].length);
     }
 }
