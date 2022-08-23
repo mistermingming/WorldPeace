@@ -1,4 +1,4 @@
-package com.sdq.libs.base
+package com.sdq.libs.base.kotlin
 
 /**
  * inline 就是我们常说的内联。

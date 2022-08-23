@@ -1,4 +1,4 @@
-package com.sdq.libs.base.designpattern.struct8;
+package com.sdq.libs.base.designpattern.struct7;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
