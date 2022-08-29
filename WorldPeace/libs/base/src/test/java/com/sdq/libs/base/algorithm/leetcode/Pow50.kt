@@ -1,4 +1,4 @@
-package com.sdq.libs.base.algorithm
+package com.sdq.libs.base.algorithm.leetcode
 
 import kotlin.math.pow
 

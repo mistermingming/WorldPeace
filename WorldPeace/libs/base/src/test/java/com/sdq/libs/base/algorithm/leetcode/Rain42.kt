@@ -1,8 +1,7 @@
-package com.sdq.libs.base.algorithm
+package com.sdq.libs.base.algorithm.leetcode
 
 import org.junit.Test
 import java.util.*
-import kotlin.math.pow
 
 /**
  *

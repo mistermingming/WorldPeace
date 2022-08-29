@@ -1,4 +1,6 @@
-package com.sdq.libs.base.algorithm
+package com.sdq.libs.base.algorithm.leetcode
+
+import com.sdq.libs.base.algorithm.TreeNode
 
 /**
  * Example:
