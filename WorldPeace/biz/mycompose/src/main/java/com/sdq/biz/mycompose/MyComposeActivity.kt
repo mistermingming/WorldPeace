@@ -53,7 +53,7 @@ class MyComposeActivity : ComponentActivity() {
     }
 }
 
-
+//可组合函数注解
 @Composable
 fun Greeting(name: String) {
     Text(text = "Hello $name!")
@@ -113,7 +113,7 @@ fun MessageCard(msg: Message) {
 @Composable
 fun Conversation(messages: List<Message>) {
     LazyColumn {
-        this.items(messages) { message ->
+        items(messages) { message ->
             MessageCard01(message)
         }
     }

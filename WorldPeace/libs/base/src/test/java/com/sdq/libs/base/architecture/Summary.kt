@@ -1,4 +1,4 @@
-package com.sdq.libs.base.arch
+package com.sdq.libs.base.architecture
 
 /**
  *
