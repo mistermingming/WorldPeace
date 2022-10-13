@@ -77,23 +77,33 @@ class KotlinTest {
     }
 
     @Test
-    fun testEquals(){
+    fun testEquals() {
         val trade = Trade(1)
         val new = Trade(id = 1)
         println(System.identityHashCode(trade))
         println(System.identityHashCode(new))
-        println(trade ==new)
+        println(trade == new)
         println(trade === new)
-        println(Throw(2)==Throw(2))
+        println(Throw(2) == Throw(2))
+    }
+
+    @Test
+    fun testAny() {
+        var a = 1
+        var b = 2
+        a = b.also { b = a }
+
+        println("$a , $b")
     }
 }
+
 class Throw(
-    val id:Int
+    val id: Int
 )
 
 class Trade(
-    val id :Int
-){
+    val id: Int
+) {
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
         if (javaClass != other?.javaClass) return false
@@ -111,6 +121,6 @@ class Trade(
 }
 
 data class CopyEvent(
-    val value :String,
+    val value: String,
     override val eventId: Long = Event.generateEventId()
 ) : Event
