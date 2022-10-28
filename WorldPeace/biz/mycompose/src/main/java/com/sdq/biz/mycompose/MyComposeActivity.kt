@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material.Button
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
@@ -40,11 +41,13 @@ class MyComposeActivity : ComponentActivity() {
                             Message("Android", "compose"),
                             Message("Android", "compose"),
                             Message("Android", "compose"),
-                            Message("Android", "只包含一条消息的聊天会略显孤单，因此请更改" +
-                                    "对话，使其包含多条消息。您需要创建一个可显示多条消息" +
-                                    "的 Conversation 函数。对于此用例，请使用 Compose 的 LazyColumn " +
-                                    "和 LazyRow。这些可组合项只会呈现屏幕上显示的元素，因此，对于较长的" +
-                                    "列表，使用它们会非常高效。")
+                            Message(
+                                "Android", "只包含一条消息的聊天会略显孤单，因此请更改" +
+                                        "对话，使其包含多条消息。您需要创建一个可显示多条消息" +
+                                        "的 Conversation 函数。对于此用例，请使用 Compose 的 LazyColumn " +
+                                        "和 LazyRow。这些可组合项只会呈现屏幕上显示的元素，因此，对于较长的" +
+                                        "列表，使用它们会非常高效。"
+                            )
                         )
                     )
                 }
@@ -59,7 +62,7 @@ fun Greeting(name: String) {
     Text(text = "Hello $name!")
 }
 
-@Preview(showBackground = true)
+//@Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
     WorldPeaceTheme {
@@ -156,7 +159,9 @@ fun MessageCard01(msg: Message) {
                 // surfaceColor color will be changing gradually from primary to surface
                 color = surfaceColor,
                 // animateContentSize will change the Surface size gradually
-                modifier = Modifier.animateContentSize().padding(1.dp)
+                modifier = Modifier
+                    .animateContentSize()
+                    .padding(1.dp)
             ) {
                 Text(
                     text = msg.body,

@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WorldPeace">
         <activity
-            android:name=".MyComposeActivity"
+            android:name=".MainActivity06"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.WorldPeace">

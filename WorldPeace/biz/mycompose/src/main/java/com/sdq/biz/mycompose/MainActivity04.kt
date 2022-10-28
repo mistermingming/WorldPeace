@@ -1,6 +1,8 @@
 package com.sdq.biz.mycompose
 
 import android.os.Bundle
+import android.os.Looper
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.runtime.Composable
@@ -17,6 +19,9 @@ import com.sdq.biz.mycompose.widget.PhotographerCard
 class MainActivity04 : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Looper.getMainLooper().setMessageLogging{ msg ->
+            Log.v("test","looper message = $msg")
+        }
         setContent {
             PhotographerCard()
         }
