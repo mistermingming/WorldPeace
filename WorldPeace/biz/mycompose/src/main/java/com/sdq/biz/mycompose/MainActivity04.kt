@@ -7,8 +7,8 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
+import com.sdq.biz.mycompose.ui.theme.WorldPeaceTheme
 import com.sdq.biz.mycompose.widget.LayoutStudy
-import com.sdq.biz.mycompose.widget.PhotographerCard
 
 /**
  *
@@ -19,17 +19,24 @@ import com.sdq.biz.mycompose.widget.PhotographerCard
 class MainActivity04 : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Looper.getMainLooper().setMessageLogging{ msg ->
-            Log.v("test","looper message = $msg")
+        Looper.getMainLooper().setMessageLogging { msg ->
+            Log.v("test", "looper message = $msg")
         }
         setContent {
-            PhotographerCard()
+            PreviewMessageCard()
         }
     }
 
     @Preview
     @Composable
     fun PreviewMessageCard() {
-        LayoutStudy()
+        WorldPeaceTheme() {
+            LayoutStudy()
+        }
+    }
+
+    @Composable
+    fun Demo() {
+
     }
 }

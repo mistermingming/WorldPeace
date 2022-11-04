@@ -16,7 +16,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
 import com.sdq.biz.mycompose.ui.theme.WorldPeaceTheme
-import com.sdq.biz.mycompose.widget.PhotographerCard
 
 /**
  *
@@ -24,7 +23,7 @@ import com.sdq.biz.mycompose.widget.PhotographerCard
  * @date 2022/8/31 13:43
  * @author songdongqi
  */
-class MainActivity06 : ComponentActivity() {
+class DialogActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
