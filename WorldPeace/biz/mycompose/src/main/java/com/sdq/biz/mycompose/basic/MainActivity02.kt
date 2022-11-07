@@ -1,4 +1,4 @@
-package com.sdq.biz.mycompose
+package com.sdq.biz.mycompose.basic
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -10,6 +10,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
+import com.sdq.biz.mycompose.R
 
 /**
  *

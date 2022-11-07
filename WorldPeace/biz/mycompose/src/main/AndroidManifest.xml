@@ -3,7 +3,7 @@
     package="com.sdq.biz.mycompose">
 
     <application>
-        <activity android:name=".MyComposeActivity"/>
+        <activity android:name=".basic.MyComposeActivity"/>
     </application>
 
 </manifest>

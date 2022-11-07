@@ -1,4 +1,4 @@
-package com.sdq.biz.mycompose
+package com.sdq.biz.mycompose.basic
 
 import android.content.res.Configuration
 import android.os.Bundle
@@ -18,6 +18,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.sdq.biz.mycompose.R
 import com.sdq.biz.mycompose.ui.theme.WorldPeaceTheme
 
 /**

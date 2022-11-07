@@ -1,4 +1,4 @@
-package com.sdq.biz.mycompose
+package com.sdq.biz.mycompose.basic
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -13,23 +13,22 @@ import androidx.compose.ui.tooling.preview.Preview
  * @date 2022/8/31 13:43
  * @author songdongqi
  */
-class MainActivity01 : ComponentActivity() {
+class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            MessageCard(Message("Android","Jetpack Compose"))
+            MessageCard(name = "My Android")
         }
     }
 
     @Composable
-    fun MessageCard(msg:Message) {
-        Text(text = msg.author)
-        Text(text = msg.body)
+    fun MessageCard(name: String) {
+        Text(text = "Hello $name")
     }
 
     @Preview
     @Composable
     fun PreviewMessageCard() {
-        MessageCard(Message("Android","Jetpack Compose"))
+        MessageCard(name = "Android")
     }
 }

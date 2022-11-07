@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WorldPeace">
         <activity
-            android:name=".CardActivity"
+            android:name=".basic.WidgetActivity"
             android:exported="true"
             android:theme="@style/Theme.WorldPeace">
             <intent-filter>
