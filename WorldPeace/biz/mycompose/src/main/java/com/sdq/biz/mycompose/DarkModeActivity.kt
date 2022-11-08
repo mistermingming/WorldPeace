@@ -1,4 +1,4 @@
-package com.sdq.biz.mycompose.basic
+package com.sdq.biz.mycompose
 
 import android.content.res.Configuration
 import android.os.Bundle
@@ -8,7 +8,6 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.material.Button
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
@@ -18,7 +17,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.sdq.biz.mycompose.R
+import com.sdq.biz.mycompose.basic.Message
 import com.sdq.biz.mycompose.ui.theme.WorldPeaceTheme
 
 /**
@@ -27,7 +26,7 @@ import com.sdq.biz.mycompose.ui.theme.WorldPeaceTheme
  * @date 2022/8/31 13:43
  * @author songdongqi
  */
-class MainActivity05 : ComponentActivity() {
+class DarkModeActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -47,16 +46,6 @@ class MainActivity05 : ComponentActivity() {
             MessageCard(
                 msg = Message("Jetpack Compose 博物馆", "我们开始更新啦")
             )
-        }
-    }
-
-    @Composable
-    fun Counter() {
-        var count by remember { mutableStateOf(0) }
-        Button(
-            onClick = { count += 1 }
-        ) {
-            Text(text = "Count:$count")
         }
     }
 

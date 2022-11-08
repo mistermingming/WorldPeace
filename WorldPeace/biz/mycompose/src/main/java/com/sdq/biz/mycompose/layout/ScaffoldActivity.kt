@@ -1,4 +1,4 @@
-package com.sdq.biz.mycompose.basic
+package com.sdq.biz.mycompose.layout
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity

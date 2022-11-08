@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WorldPeace">
         <activity
-            android:name=".basic.WidgetActivity"
+            android:name=".layout.LayoutActivity"
             android:exported="true"
             android:theme="@style/Theme.WorldPeace">
             <intent-filter>
