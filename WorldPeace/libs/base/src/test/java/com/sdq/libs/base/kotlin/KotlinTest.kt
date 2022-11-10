@@ -1,6 +1,7 @@
 package com.sdq.libs.base
 
 import org.junit.Test
+import java.util.*
 import kotlin.system.measureTimeMillis
 
 class KotlinTest {
@@ -94,6 +95,31 @@ class KotlinTest {
         a = b.also { b = a }
 
         println("$a , $b")
+    }
+
+    @Test
+    fun testUUID() {
+        println(UUID.nameUUIDFromBytes("9774d56d682e549c".toByteArray()))
+        println(UUID.nameUUIDFromBytes("9774d56d682e549c".toByteArray()))
+    }
+
+    @Test
+    fun initOrder() {
+        val order = Order("22222")
+    }
+}
+
+class Order {
+    constructor() {
+
+    }
+
+    constructor(value: String) {
+
+    }
+
+    init {
+        println("init ")
     }
 }
 

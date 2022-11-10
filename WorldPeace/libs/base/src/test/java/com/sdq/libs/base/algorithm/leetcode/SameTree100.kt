@@ -1,6 +1,6 @@
 package com.sdq.libs.base.algorithm.leetcode
 
-import com.sdq.libs.base.algorithm.TreeNode
+import com.sdq.libs.base.algorithm.BinaryNode
 
 /**
  * Example:
@@ -13,7 +13,7 @@ import com.sdq.libs.base.algorithm.TreeNode
  * }
  */
 class SameTree100 {
-    fun isSameTree(p: TreeNode?, q: TreeNode?): Boolean {
+    fun isSameTree(p: BinaryNode?, q: BinaryNode?): Boolean {
         return false
     }
 }

@@ -74,4 +74,5 @@ public class JavaTest {
         mStockAccountArr[0] = new CharSequence[]{"1"};
         System.out.println("copyValue1 = "+ copyValue[0].length);
     }
+
 }
