@@ -14,7 +14,7 @@ class CoroutinesTest {
         println("start ${Thread.currentThread().name}")
         val startTime = System.currentTimeMillis()
         coroutineScope {
-
+            println("coroutineScope ${Thread.currentThread().name}")
         }
         launch {
             var nextPrintTime = startTime
@@ -25,6 +25,7 @@ class CoroutinesTest {
                     nextPrintTime += 500
                 }
             }
+            println("launch ${Thread.currentThread().name}")
         }
         println("end ${Thread.currentThread().name}")
     }

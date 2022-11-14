@@ -13,8 +13,15 @@ class LayoutProcess {
      *
      * ActivityThread.java
      * handleResumeActivity->
-     * performResumeActivity -> r.activity.performResume(r.startsNotResumed, reason); ->
-     * View decor = r.window.getDecorView();
+     * (1)performResumeActivity -> r.activity.performResume(r.startsNotResumed, reason); ->
+     *
+     * Activity.java
+     * performResume ->mInstrumentation.callActivityOnResume(this);
+     *
+     * Instrumentation.java
+     * activity.onResume();
+     *
+     * (2)View decor = r.window.getDecorView();
      * wm.addView(decor, l);
      *
      * WindowManagerGlobal.java
@@ -23,11 +30,13 @@ class LayoutProcess {
      * ViewRootImpl.java
      * setView -> requestLayout(); -> scheduleTraversals();
      *
-     * Activity.java
-     * performResume ->mInstrumentation.callActivityOnResume(this);
-     *
-     * Instrumentation.java
-     * activity.onResume();
+
+     */
+
+
+    /**
+     * 为什么不能在子线程更新UI
+     * ViewRootImpl.checkThread——if (mThread != Thread.currentThread())
      */
 
 

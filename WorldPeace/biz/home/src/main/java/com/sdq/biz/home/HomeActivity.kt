@@ -20,6 +20,27 @@ class HomeActivity : AppCompatActivity() {
             startActivity(Intent(this,SecondActivity::class.java))
         }
 
+        lifecycleScope.launch {
+            println("start ${Thread.currentThread().name}")
+            val startTime = System.currentTimeMillis()
+            coroutineScope {
+                println("coroutineScope ${Thread.currentThread().name}")
+            }
+            launch {
+                var nextPrintTime = startTime
+                var i = 0
+                while (i < 5) {
+                    if (System.currentTimeMillis() >= nextPrintTime) {
+                        println("job : i am sleeping ${i++} ///")
+                        nextPrintTime += 500
+                    }
+                }
+                println("launch ${Thread.currentThread().name}")
+            }
+            println("end ${Thread.currentThread().name}")
+        }
+
+
         observe()
     }
 

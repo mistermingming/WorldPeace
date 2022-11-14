@@ -8,6 +8,12 @@ import org.junit.Test
  * @date 2022/8/10 10:41
  * @author songdongqi
  */
+/**
+ * &:按位求与,and
+ * |:按位求或,or
+ * ^:按位求异或,——xor
+ * ~:按位求反
+ */
 class HashMap {
     val MAXIMUM_CAPACITY = 1 shl 30
 
