@@ -10,8 +10,12 @@ import com.sdq.libs.base.algorithm.BinaryNode
  */
 class SymmetricalBinary101 {
     /**
-     *
+     * 对称二叉树
      */
+    fun symmetricalBinary(root: BinaryNode) {
+        isRootEqual(root, root)
+    }
+
     private fun isRootEqual(root1: BinaryNode?, root2: BinaryNode?): Boolean {
         return when {
             root1 == null && root2 == null -> true

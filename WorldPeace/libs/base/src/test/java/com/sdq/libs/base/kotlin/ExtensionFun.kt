@@ -23,3 +23,8 @@ class Extension {
         }
     }
 }
+
+class Value {
+    var change: Int = 2
+    val noChange: Int = 1
+}
