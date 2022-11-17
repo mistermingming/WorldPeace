@@ -150,3 +150,15 @@ data class CopyEvent(
     val value: String,
     override val eventId: Long = Event.generateEventId()
 ) : Event
+
+class Scope {
+    companion object {
+        private const val ACCESS: String = "access"
+    }
+}
+
+class Test {
+    fun test() {
+        Scope
+    }
+}

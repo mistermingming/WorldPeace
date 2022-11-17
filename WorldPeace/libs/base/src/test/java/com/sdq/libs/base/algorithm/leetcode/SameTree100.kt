@@ -13,7 +13,11 @@ import com.sdq.libs.base.algorithm.BinaryNode
  * }
  */
 class SameTree100 {
-    fun isSameTree(p: BinaryNode?, q: BinaryNode?): Boolean {
-        return false
+    private fun isSameTree(p: BinaryNode?, q: BinaryNode?): Boolean {
+        return when {
+            p == null && q == null -> true
+            p == null || q == null || p.value != q.value -> false
+            else -> isSameTree(p.left, q.left) && isSameTree(p.right, q.right)
+        }
     }
 }
