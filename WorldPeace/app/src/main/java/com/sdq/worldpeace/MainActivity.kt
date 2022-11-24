@@ -1,13 +1,11 @@
 package com.sdq.worldpeace
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
 import android.widget.EditText
-import com.sdq.worldpeace.hilttest.SecondActivity
+import androidx.appcompat.app.AppCompatActivity
 import com.sdq.worldpeace.hilttest.User
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
@@ -22,6 +20,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        window.decorView
         setContentView(R.layout.activity_main)
         findViewById<EditText>(R.id.et_test).addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
