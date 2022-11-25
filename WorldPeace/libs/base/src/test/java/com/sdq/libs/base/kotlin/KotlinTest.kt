@@ -1,5 +1,6 @@
-package com.sdq.libs.base
+package com.sdq.libs.base.kotlin
 
+import com.sdq.libs.base.Event
 import org.junit.Test
 import java.util.*
 import kotlin.system.measureTimeMillis
