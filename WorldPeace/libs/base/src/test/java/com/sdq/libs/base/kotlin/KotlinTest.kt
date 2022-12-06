@@ -1,5 +1,6 @@
 package com.sdq.libs.base.kotlin
 
+import android.os.SystemClock
 import com.sdq.libs.base.Event
 import org.junit.Test
 import java.util.*
@@ -107,6 +108,17 @@ class KotlinTest {
     @Test
     fun initOrder() {
         val order = Order("22222")
+    }
+
+    @Test
+    fun testAnd(){
+        val and = 4367.and(255)
+        println(and)
+    }
+
+    @Test
+    fun testTime(){
+        println("${System.currentTimeMillis()}  ${SystemClock.uptimeMillis()}")
     }
 }
 
