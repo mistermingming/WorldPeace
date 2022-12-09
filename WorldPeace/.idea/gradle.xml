@@ -14,6 +14,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/biz" />
+            <option value="$PROJECT_DIR$/biz/dashboarduiwithdarkmode" />
             <option value="$PROJECT_DIR$/biz/home" />
             <option value="$PROJECT_DIR$/biz/login" />
             <option value="$PROJECT_DIR$/biz/mvi" />

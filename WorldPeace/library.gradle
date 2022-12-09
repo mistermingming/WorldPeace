@@ -18,11 +18,12 @@ ext {
     ]
 
     applicationId = [
-            "app"      : "com.sdq.worldpeace",
-            "home"     : "com.sdq.home",
-            "login"    : "com.sdq.login",
-            "mvi"      : "com.sdq.mvi",
-            "mycompose": "com.sdq.biz.mycompose"
+            "app"                    : "com.sdq.worldpeace",
+            "home"                   : "com.sdq.home",
+            "login"                  : "com.sdq.login",
+            "mvi"                    : "com.sdq.mvi",
+            "mycompose"              : "com.sdq.mycompose",
+            "dashboarduiwithdarkmode": "com.sdq.dashboarduiwithdarkmode"
     ]
 
     plugin = [
