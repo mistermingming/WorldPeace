@@ -1,7 +1,9 @@
-def cfg = rootProject.ext
-
+plugins {
+    id 'dagger.hilt.android.plugin'
+}
 apply from: "../../project_lib.gradle"
-apply plugin: 'dagger.hilt.android.plugin'
+
+def cfg = rootProject.ext
 
 dependencies {
     implementation project(':libs:base')
@@ -11,4 +13,7 @@ dependencies {
 
     api "com.google.dagger:hilt-android:$cfg.library.hiltVersion"
     kapt "com.google.dagger:hilt-compiler:$cfg.library.hiltVersion"
+
+    implementation 'com.github.bumptech.glide:glide:4.14.2'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.14.2'
 }

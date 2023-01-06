@@ -18,5 +18,9 @@ dependencies {
     api "org.jetbrains.kotlinx:kotlinx-coroutines-android:$cfg.library.kotlinxCoroutinesAndroid"
     api "androidx.lifecycle:lifecycle-runtime-ktx:$cfg.library.lifecycleRuntimeKtx"
     api "com.google.dagger:hilt-android:$cfg.library.hiltVersion"
+    api "androidx.navigation:navigation-fragment-ktx:$cfg.library.navigation"
+    api "androidx.navigation:navigation-ui-ktx:$cfg.library.navigation"
     kapt "com.google.dagger:hilt-compiler:$cfg.library.hiltVersion"
+    api "org.jetbrains.kotlin:kotlin-reflect:1.7.0"
+    implementation "org.jetbrains.kotlin:kotlin-reflect:1.7.0"
 }

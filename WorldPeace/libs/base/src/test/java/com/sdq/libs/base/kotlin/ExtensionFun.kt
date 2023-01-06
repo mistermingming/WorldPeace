@@ -17,6 +17,17 @@ object ExtensionFun {
 }
 
 class Extension {
+    private val value = "value"
+    private val valueGet: String
+        get() {
+            return "value"
+        }
+
+    private fun testValue() {
+        valueGet
+        value
+    }
+
     companion object {
         fun test2() {
 

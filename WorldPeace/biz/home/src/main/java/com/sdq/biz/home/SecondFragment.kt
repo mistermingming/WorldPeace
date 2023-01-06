@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import java.sql.Connection
 
-class HomeFragment : Fragment() {
+class SecondFragment : Fragment() {
     companion object {
         val dbConnectionLocal = object : ThreadLocal<Connection>() {
 
@@ -26,17 +26,17 @@ class HomeFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Log.d("songdongqi", "fragment onCreate is invoke!!!")
+        Log.d("songdongqi", "fragment 2 onCreate is invoke!!!")
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
-        Log.d("songdongqi", "fragment onSaveInstanceState is invoke!!!")
+        Log.d("songdongqi", "fragment 2 onSaveInstanceState is invoke!!!")
     }
 
     override fun onViewStateRestored(savedInstanceState: Bundle?) {
         super.onViewStateRestored(savedInstanceState)
-        Log.d("songdongqi", "fragment onViewStateRestored is invoke!!!")
+        Log.d("songdongqi", "fragment 2 onViewStateRestored is invoke!!!")
     }
 
     override fun onCreateView(
@@ -44,45 +44,42 @@ class HomeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        Log.d("songdongqi", "fragment onCreateView is invoke!!!")
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        Log.d("songdongqi", "fragment 2 onCreateView is invoke!!!")
+        return super.onCreateView(inflater, container, savedInstanceState)
     }
 
-    /**
-     * 执行完onViewCreated才会执行 FragmentStateManager.java-> activityCreated ->restoreViewState
-     */
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        Log.d("songdongqi", "fragment onViewCreated is invoke!!!")
+        Log.d("songdongqi", "fragment 2 onViewCreated is invoke!!!")
     }
 
     override fun onStart() {
         super.onStart()
-        Log.d("songdongqi", "fragment onStart is invoke!!!")
+        Log.d("songdongqi", "fragment 2 onStart is invoke!!!")
     }
 
     override fun onResume() {
         super.onResume()
-        Log.d("songdongqi", "fragment onResume is invoke!!!")
+        Log.d("songdongqi", "fragment 2 onResume is invoke!!!")
     }
 
     override fun onPause() {
         super.onPause()
-        Log.d("songdongqi", "fragment onPause is invoke!!!")
+        Log.d("songdongqi", "fragment 2 onPause is invoke!!!")
     }
 
     override fun onStop() {
         super.onStop()
-        Log.d("songdongqi", "fragment onStop is invoke!!!")
+        Log.d("songdongqi", "fragment 2 onStop is invoke!!!")
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
-        Log.d("songdongqi", "fragment onDestroyView is invoke!!!")
+        Log.d("songdongqi", "fragment 2 onDestroyView is invoke!!!")
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        Log.d("songdongqi", "fragment onDestroy is invoke!!!")
+        Log.d("songdongqi", "fragment 2 onDestroy is invoke!!!")
     }
 }

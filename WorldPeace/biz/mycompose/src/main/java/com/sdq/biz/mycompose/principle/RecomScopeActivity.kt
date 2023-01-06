@@ -1,5 +1,6 @@
 package com.sdq.biz.mycompose.principle
 
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.ComponentActivity
@@ -21,6 +22,7 @@ import com.sdq.biz.mycompose.ui.theme.WorldPeaceTheme
 class RecomScopeActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContent {
             PreviewComposable()
         }
@@ -73,7 +75,31 @@ class RecomScopeActivity : ComponentActivity() {
     @Composable
     fun Foo02() {
         var text by remember { mutableStateOf("") }
-        Button(onClick = { text = "$text $text" }) {
+        Button(
+            onClick = {
+                val originUrl = "https://qsdf.gw.com.cn/xgxz/detail.html?channel=jjsg&code="
+                val uri = Uri.parse(originUrl)
+                println(uri.encodedQuery)
+                println(uri.query)
+                println(uri.queryParameterNames)
+                val uriBuilder = uri.buildUpon()
+                uriBuilder.clearQuery()
+                val queryParameters = mapOf(
+                    "title" to "F10",
+                    "code" to "787001"
+                )
+                queryParameters.forEach {
+                    if (uri.queryParameterNames.equals(it.key)){
+                        uriBuilder.appendQueryParameter(it.key, it.value)
+                    }else{
+                        uriBuilder.appendQueryParameter(it.key, it.value)
+                    }
+                }
+                val url = uriBuilder.build().toString()
+                println(url)
+                text = "$text $text"
+            }
+        ) {
             Log.d("TAG", "Button content lambda")
             Wrapper {
                 Text(text).also { Log.d("TAG", "Text") }

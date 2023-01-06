@@ -42,7 +42,8 @@ ext {
             "kotlinxCoroutinesAndroid": "1.6.1",
             "lifecycleRuntimeKtx"     : "2.4.1",
             "hiltVersion"             : "2.42",
-            "composeVersion"          : "1.2.0"
+            "composeVersion"          : "1.2.0",
+            "navigation"              : "2.5.2"
     ]
 
     libARouter = "1.5.1"

@@ -1,33 +1,26 @@
 package com.sdq.biz.home
 
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.Lifecycle
-import androidx.lifecycle.coroutineScope
-import androidx.lifecycle.lifecycleScope
-import androidx.lifecycle.repeatOnLifecycle
-import kotlinx.coroutines.*
-import kotlinx.coroutines.flow.conflate
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.flow
 
 class SecondActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Log.d("songdongqi","onCreate is invoke!!!")
+        Log.d("songdongqi", "onCreate is invoke!!!")
         setContentView(R.layout.activity_home)
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
-        Log.d("songdongqi","onSaveInstanceState is invoke!!!")
+        Log.d("songdongqi", "onSaveInstanceState is invoke!!!")
     }
 
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
         super.onRestoreInstanceState(savedInstanceState)
-        Log.d("songdongqi","onRestoreInstanceState is invoke!!!")
+        Log.d("songdongqi", "onRestoreInstanceState is invoke!!!")
     }
 
     /**
@@ -35,7 +28,7 @@ class SecondActivity : AppCompatActivity() {
      */
     override fun onRestart() {
         super.onRestart()
-        Log.d("songdongqi","onRestart is invoke!!!")
+        Log.d("songdongqi", "onRestart is invoke!!!")
     }
 
     /**
@@ -43,7 +36,7 @@ class SecondActivity : AppCompatActivity() {
      */
     override fun onStart() {
         super.onStart()
-        Log.d("songdongqi","onStart is invoke!!!")
+        Log.d("songdongqi", "onStart is invoke!!!")
     }
 
     /**
@@ -51,7 +44,7 @@ class SecondActivity : AppCompatActivity() {
      */
     override fun onResume() {
         super.onResume()
-        Log.d("songdongqi","onResume is invoke!!!")
+        Log.d("songdongqi", "onResume is invoke!!!")
     }
 
     /**
@@ -59,7 +52,7 @@ class SecondActivity : AppCompatActivity() {
      */
     override fun onPause() {
         super.onPause()
-        Log.d("songdongqi","onPause is invoke!!!")
+        Log.d("songdongqi", "onPause is invoke!!!")
     }
 
     /**
@@ -67,7 +60,7 @@ class SecondActivity : AppCompatActivity() {
      */
     override fun onStop() {
         super.onStop()
-        Log.d("songdongqi","onStop is invoke!!!")
+        Log.d("songdongqi", "onStop is invoke!!!")
     }
 
     /**
@@ -75,8 +68,9 @@ class SecondActivity : AppCompatActivity() {
      */
     override fun onDestroy() {
         super.onDestroy()
-        Log.d("songdongqi","onDestroy is invoke!!!")
+        Log.d("songdongqi", "onDestroy is invoke!!!")
     }
+
     private fun simpleFlow5() = flow<Int> {
         for (i in 1..5) {
             delay(100)

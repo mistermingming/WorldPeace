@@ -2,10 +2,12 @@ package com.sdq.biz.home
 
 import android.content.Intent
 import android.os.Bundle
+import android.text.TextUtils
 import android.util.Log
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.*
+import androidx.navigation.findNavController
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.*
 
@@ -18,6 +20,19 @@ class HomeActivity : AppCompatActivity() {
 
         findViewById<TextView>(R.id.tv_hello).setOnClickListener {
             startActivity(Intent(this,SecondActivity::class.java))
+        }
+
+        //跑马灯 tips 不兼容放大缩小
+        findViewById<TextView>(R.id.tv_hello).apply {
+            ellipsize = TextUtils.TruncateAt.MARQUEE
+            isSingleLine = true
+            isSelected = true
+            isFocusable = true
+            isFocusableInTouchMode = true
+        }
+
+        findViewById<TextView>(R.id.tv_hello1).setOnClickListener {
+            findNavController(R.id.container).navigate(R.id.action_homeFragment_to_secondFragment)
         }
 
         lifecycleScope.launch {

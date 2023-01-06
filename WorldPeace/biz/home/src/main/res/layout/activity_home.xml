@@ -8,12 +8,44 @@
 
     <TextView
         android:id="@+id/tv_hello"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:text="Hello World!Hello World!Hello World!Hello World!"
+        android:textSize="28sp"
+        app:autoSizeMaxTextSize="28sp"
+        app:autoSizeMinTextSize="9sp"
+        app:autoSizeStepGranularity="1sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/tv_hello1"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="Hello World!Hello World!Hello World!Hello World!"
+        android:textSize="28sp"
+        app:autoSizeMaxTextSize="28sp"
+        app:autoSizeMinTextSize="9sp"
+        app:autoSizeStepGranularity="1sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_hello" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        app:defaultNavHost="true"
+        app:layout_constraintTop_toBottomOf="@+id/tv_hello1"
+        app:navGraph="@navigation/nav_home"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

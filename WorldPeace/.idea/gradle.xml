@@ -21,6 +21,7 @@
             <option value="$PROJECT_DIR$/biz/mycompose" />
             <option value="$PROJECT_DIR$/framework" />
             <option value="$PROJECT_DIR$/framework/pay" />
+            <option value="$PROJECT_DIR$/framework/webview" />
             <option value="$PROJECT_DIR$/libs" />
             <option value="$PROJECT_DIR$/libs/base" />
             <option value="$PROJECT_DIR$/libs/router" />
