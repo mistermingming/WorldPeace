@@ -8,9 +8,9 @@ ext {
     isDebug = true
 
     android = [
-            compileSdkVersion: 32,
+            compileSdkVersion: 33,
             minSdkVersion    : 21,
-            targetSdkVersion : 32,
+            targetSdkVersion : 33,
             buildToolsVersion: "30.0.3",
 
             versionCode      : 1,
@@ -28,24 +28,24 @@ ext {
 
     plugin = [
             "androidGradlePlugin": "7.2.2",
-            "kotlinVersion"      : "1.8.21",
+            "kotlinVersion"      : "1.8.10",
             "hiltGradlePlugin"   : "2.45"
     ]
 
     library = [
-            "fragmentKtx"             : "1.5.7",
-            "activityKtx"             : "1.7.1",
-            "coreKtx"                 : "1.10.0",
+            "fragmentKtx"             : "1.6.1",
+            "activityKtx"             : "1.7.2",
+            "coreKtx"                 : "1.10.1",
             "appcompat"               : "1.6.1",
             "material"                : "1.9.0",
             "dataStoreVersion"        : "1.0.0",
             "constraintlayout"        : "2.1.4",
             "kotlinxCoroutinesAndroid": "1.7.0",
-            "lifecycleRuntimeKtx"     : "2.6.1",
+            "lifecycleRuntimeKtx"     : "2.6.2",
             "hiltVersion"             : "2.45",
             "hiltCompilerVersion"     : "1.0.0",
             "navigation"              : "2.5.3",
-            "composeVersion"          : "1.4.3",
+            "composeVersion"          : "1.6.0-alpha06",
             "composeAccompanist"      : "0.30.1",
             "composeCompiler"         : "1.4.7",
             // mock

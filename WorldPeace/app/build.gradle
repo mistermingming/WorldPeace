@@ -42,4 +42,6 @@ dependencies {
 
     api "com.google.dagger:hilt-android:$cfg.library.hiltVersion"
     kapt "com.google.dagger:hilt-compiler:$cfg.library.hiltVersion"
+
+    implementation 'com.github.orientsec:easysocket:2.2.0-beta2'
 }
